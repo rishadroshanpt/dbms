@@ -40,6 +40,7 @@ except:
 # con.execute("insert into mark(roll_no,sub,mark)values(1,'cs',70),(1,'chem',49),(2,'phy',58),(4,'eng',45)")
 # con.commit()
 # data=con.execute("select std.roll_no,std.name,std.age,mark.sub,mark.mark from std cross join mark")
+# data=con.execute("select std.roll_no,std.name,std.age,mark.sub,mark.mark from std inner join mark on std.roll_no=mark.roll_no")
 # for i in data:
 #     print(i)
 data=con.execute("select name,count(age) from std group by name")
